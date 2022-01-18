@@ -14,11 +14,11 @@ def to_image(model,
              dpi: int = 96):
     """
     get a model image
-    :param model: the model
+    :param model: a keras model
     :param to_file: output file (default 'model.png')
-    :param show_shapes: wether or not show shapes (default True)
-    :param show_dtypes: wether or not show dtypes (default True)
-    :param show_layer_names: wether or not show names (default True)
+    :param show_shapes: weather or not show shapes (default True)
+    :param show_dtypes: weather or not show dtypes (default True)
+    :param show_layer_names: weather or not show names (default True)
     :param rankdir: 'TB' creates a vertical plot; 'LR' creates a horizontal plot (default 'TB')
     :param expand_nested: Whether to expand nested models into clusters (default False)
     :param dpi: dots per inch (default 96)
@@ -29,7 +29,7 @@ def to_image(model,
 def visualize_nn(model, layers_config, description: bool = True, figure_size=(10, 8)):
     """
     Plot the structure of a keras neural network.
-    :param model: model
+    :param model: a keras model
     :param layers_config: neural_network_helper.get_neural_network_config
     :param description:  hide/show description
     :param figure_size: (x,y) - figure size
