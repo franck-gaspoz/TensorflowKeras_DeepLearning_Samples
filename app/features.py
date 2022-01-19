@@ -72,6 +72,16 @@ def classify_image_using_vgg16_cnn(img_path: str):
     :return: ModelVGG16Predict vgg16 model
     """
     model = neural_networks.get_vgg16()
+    return classify_image_using_model_vgg16_cnn(model, img_path)
+
+
+def classify_image_using_model_vgg16_cnn(model, img_path: str):
+    """
+    classify an image using a vgg16 model
+    :param model vgg16 model
+    :param img_path path of the image to be classified
+    :return: ModelVGG16Predict vgg16 model
+    """
     image = get_image_vgg16_cnn(img_path)
     proba = model.predict(image)
     label = decode_predictions(proba)
