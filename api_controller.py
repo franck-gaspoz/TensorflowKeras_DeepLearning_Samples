@@ -62,7 +62,6 @@ def classify_all(image_filename: str):
 
     result = []
     for i in range(len(predict.label[0])):
-        print(predict.label[0][i][0])
         result.append({
             "type": predict.label[0][i][1],
             "probability": str(predict.label[0][i][2])
