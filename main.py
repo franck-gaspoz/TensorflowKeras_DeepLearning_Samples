@@ -16,7 +16,8 @@ def main():
 
     predict = features.classify_image_using_vgg16_cnn("data/CNN-VGG-mug.jpg")
     predict.model.summary()
-    print(predict.proba)
+    print(predict.label)
+    print("type: ", predict.label[0][0][1], " with probability: ", predict.label[0][0][2])
 
 
 if __name__ == '__main__':

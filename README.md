@@ -6,6 +6,7 @@ Python library and PyCharm project that includes deep learning samples and neura
 - deep neural network with perceptron
 - image classification with VGG16
 - neural network model visualization
+- Web Api that serves application features
 
 ## Dependencies
 
@@ -16,3 +17,5 @@ Python library and PyCharm project that includes deep learning samples and neura
 - shap 0.40.0
 - pydot 1.4.2
 - graphviz
+- fastapi 0.72.0
+- uvicorn[standard] 0.17

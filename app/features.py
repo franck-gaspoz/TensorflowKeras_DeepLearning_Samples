@@ -9,6 +9,7 @@ from lib import neural_network_view_helper
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
 from keras.applications.vgg16 import preprocess_input
+from keras.applications.vgg16 import decode_predictions
 
 
 def initialize():
@@ -73,20 +74,24 @@ def classify_image_using_vgg16_cnn(img_path: str):
     model = neural_networks.get_vgg16()
     image = get_image_vgg16_cnn(img_path)
     proba = model.predict(image)
-    return ModelVGG16Predict(image, model, proba)
+    label = decode_predictions(proba)
+
+    return ModelVGG16Predict(image, model, proba, label)
 
 
 class ModelVGG16Predict:
     """
     vgg16 cnn image classification inputs and results
     """
-    def __init__(self, image, model, proba):
+    def __init__(self, image, model, proba, label):
         """
         :param image: image to be classified
         :param model: vgg16 cnn model
         :param proba: classification result
+        :param label: bests predictions
         """
         self.image = image
         self.model = model
         self.proba = proba
+        self.label = label
 
