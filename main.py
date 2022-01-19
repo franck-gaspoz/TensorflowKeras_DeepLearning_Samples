@@ -2,6 +2,7 @@
 
 from app import features
 from lib import neural_network_view_helper
+from lib import neural_networks
 
 
 def main():
@@ -9,8 +10,13 @@ def main():
     main function
     """
     features.initialize()
-    model = features.build_and_show_deep_neural_network()
-    neural_network_view_helper.to_image(model)
+
+    # model = features.build_and_show_deep_neural_network()
+    # neural_network_view_helper.to_image(model)
+
+    predict = features.classify_image_using_vgg16_cnn("data/CNN-VGG-mug.jpg")
+    predict.model.summary()
+    print(predict.proba)
 
 
 if __name__ == '__main__':

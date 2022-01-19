@@ -4,6 +4,7 @@ Python library and PyCharm project that includes deep learning samples and neura
 
 - single fully connected layer
 - deep neural network with perceptron
+- image classification with VGG16
 - neural network model visualization
 
 ## Dependencies

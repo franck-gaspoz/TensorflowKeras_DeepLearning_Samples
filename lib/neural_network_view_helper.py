@@ -5,11 +5,11 @@ from tensorflow.keras import utils
 
 
 def to_image(model,
-             to_file: str = 'model.png',
+             to_file: str = 'data/model.png',
              show_shapes: bool = True,
              show_dtypes: bool = True,
              show_layer_names: bool = True,
-             rankdir: str = 'TB',
+             rank_dir: str = 'TB',
              expand_nested: bool = False,
              dpi: int = 96):
     """
@@ -19,11 +19,11 @@ def to_image(model,
     :param show_shapes: weather or not show shapes (default True)
     :param show_dtypes: weather or not show dtypes (default True)
     :param show_layer_names: weather or not show names (default True)
-    :param rankdir: 'TB' creates a vertical plot; 'LR' creates a horizontal plot (default 'TB')
+    :param rank_dir: 'TB' creates a vertical plot; 'LR' creates a horizontal plot (default 'TB')
     :param expand_nested: Whether to expand nested models into clusters (default False)
     :param dpi: dots per inch (default 96)
     """
-    utils.plot_model(model, to_file, show_shapes, show_dtypes, show_layer_names, rankdir, expand_nested, dpi)
+    utils.plot_model(model, to_file, show_shapes, show_dtypes, show_layer_names, rank_dir, expand_nested, dpi)
 
 
 def visualize_nn(model, layers_config, description: bool = True, figure_size=(10, 8)):

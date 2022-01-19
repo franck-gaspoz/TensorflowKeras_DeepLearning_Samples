@@ -1,6 +1,23 @@
 """Neural networks samples"""
 
 from tensorflow.keras import models, layers
+from keras.applications.vgg16 import VGG16
+import os.path
+
+
+def get_vgg16():
+    """
+    get a vgg16 from pre-trained production model
+    stores it locally in current path (data/vgg16.h5)
+    keras already cache it in ~/.keras/models/vgg16_weights_tf_dim_ordering_tf_kernels.h5
+    :return: model
+    """
+    model = VGG16()
+    # save a local version of the model, do not overwrite
+    path = "data/vgg16.h5"
+    if not os.path.isfile(path):
+        model.save(path)
+    return model
 
 
 def get_fully_connected_layer():
