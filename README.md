@@ -8,6 +8,34 @@ Python library and PyCharm project that includes deep learning samples and neura
 - neural network model visualization
 - Web Api that serves application features
 
+## Screenshots
+
+### a deep NN view
+
+![Deep NN draw](doc/DeepNN.png)
+
+### image prediction with WebAPI and VGG16
+
+#### starting the server Uvicorn
+
+![server logs](doc/server.png)
+
+#### querying for a prediction giving a mug picture
+
+![mug picture](doc/CNN-VGG-mug.jpg)
+
+gives a very good result: probability to be a coffee mug > 98%
+
+![mug prediction](doc/mug-prediction.png)
+
+#### querying for a prediction giving a car picture "talbot samba"
+
+![car picture](doc/talbot-samba-red.jpeg)
+
+is very less accurate: probability to be a 'minibus' > 81% ;)
+
+![car prediction](doc/samba-predict.png)
+
 ## Dependencies
 
 - python 3.9.9
