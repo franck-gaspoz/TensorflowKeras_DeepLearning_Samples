@@ -2,7 +2,6 @@
 
 from app import features
 from lib import neural_network_view_helper
-from lib import neural_networks
 
 
 def main():
@@ -11,8 +10,12 @@ def main():
     """
     features.initialize()
 
-    # model = features.build_and_show_deep_neural_network()
-    # neural_network_view_helper.to_image(model)
+    # sample 1 : draw the model
+
+    model = features.build_and_show_deep_neural_network()
+    neural_network_view_helper.to_image(model)
+
+    # sample 2 : predict an image with VGG16
 
     predict = features.classify_image_using_vgg16_cnn("data/CNN-VGG-mug.jpg")
     predict.model.summary()

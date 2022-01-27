@@ -1,8 +1,8 @@
 """
 TensorflowKeras_DeepLearning_Samples WEB API
+run using: uvicorn api_controller:app --reload
 """
 import sys
-from typing import Optional
 from fastapi import FastAPI
 from app import features
 from lib import neural_networks
